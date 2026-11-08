@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financial-risk-manager"
+version = "0.1.0"
+description = "Command-line portfolio risk calculator. Local price files only."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Pascale Cannon" }]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "pyyaml>=6.0",
+]
+
+[project.scripts]
+frm = "financial_risk_manager.cli:main"
+
+[tool.setuptools.packages.find]
+where = [".", "src"]
+include = ["core*", "financial_risk_manager*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "src"]

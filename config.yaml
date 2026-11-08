@@ -1,0 +1,9 @@
+# Annual risk-free rate as a decimal (0.04 = 4%).
+# Used only to compute the mean-excess Sharpe ratio.
+risk_free_rate: 0.04
+
+# Trading days in the volatility and Sharpe annualization.
+trading_days: 252
+
+# One-day historical VaR confidence. 0.95 means the 5% loss tail.
+var_confidence: 0.95
